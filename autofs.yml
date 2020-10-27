@@ -1,0 +1,8 @@
+--
+- hosts: all
+  tasks:
+    - name: add nfs config file
+      copy:
+       content: "/home/guests    -rw,vers=4.0, chbdipa01.ipa.aebi-schmidt.com:/home/guests"
+       dest: "/etc/auto.nfs"
+   
