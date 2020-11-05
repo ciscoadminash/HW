@@ -1,5 +1,5 @@
 --
-- hosts: all
+- hosts: 10.10.1.86
   tasks:
     - name: fetch fstab
      fetch: 
