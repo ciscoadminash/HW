@@ -3,6 +3,6 @@
   become: yes
   tasks:
     - name: Fetch ports.conf
-      fetch: dest=save/{{ansible_hostname}}/ports.conf src=/etc/fstab flat=yes
+      fetch: dest=save/{{DESBLXB31}}/ports.conf src=/etc/fstab flat=yes
 
     
