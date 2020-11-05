@@ -1,0 +1,15 @@
+- name: Backup /etc/fstab
+  connection: local
+  hosts: all
+
+  gather_facts: no
+  vars:
+    cli:
+      host: "{{ inventory_hostname }}"
+#      username: Groupadmin
+#      password: W0rk1nNetw0rk$
+
+  tasks:
+  - name: Fetch /etc/fstab
+    fetch: dest=save/{{ansible_hostname}}/frr.conf src=/etc/frr/frr.conf flat=yes
+
