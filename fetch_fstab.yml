@@ -1,0 +1,5 @@
+--
+- hosts: all
+  tasks:
+    - name: fetch fstab
+     fetch: dest=save/{{ansible_hostname}}/home/backup src=/etc/fstab flat=yes
