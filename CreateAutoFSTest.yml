@@ -5,3 +5,7 @@
       copy:
        content: "/home/guests    -rw,vers=4.0, chbdipa01.ipa.aebi-schmidt.com:/home/guests"
        dest: "/etc/auto.nfs"
+       - name: fetch fstab
+     fetch: 
+     src: /etc/fstab
+dest: /home/backup
