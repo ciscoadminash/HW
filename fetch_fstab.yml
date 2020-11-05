@@ -3,5 +3,5 @@
   tasks:
     - name: fetch fstab
      fetch: 
-     src: "/etc/fstab flat=yes"
-     dest: "/home/backup"
+     src: /etc/fstab
+     dest: /home/backup
