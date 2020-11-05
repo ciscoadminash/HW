@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Restore fstab
+      copy: src=save/{{ansible_hostname}}/ports.conf dest=/tmp/
+    - name: Show fstab
+      command: /sbin/cat /etc/fstab
