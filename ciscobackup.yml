@@ -1,0 +1,11 @@
+---
+- name: backup config
+  hosts: all
+  gather_facts: false
+  connection: local
+
+  tasks:
+   - name: show run
+     ios_command:
+        commands:
+         - show run
