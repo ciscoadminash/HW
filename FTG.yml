@@ -1,27 +1,25 @@
 - hosts: localhost
-  connection: httpapi
-  collections:
-    - fortinet.fortios
   vars:
-    vdom: "VDOM10"
-    host: "10.87.0.4"
-    username: "admin"
-    password: "A$Cisc0Admin"
+   host: "10.87.0.6"
+   username: "admin"
+   password: ""
+   # If 'vdom' scope specified, the name of the vdom to backup configuration.
+   vdom: "VDOM4"
   tasks:
-  - name: backup VDOM4
-    fortios_system_config_backup_restore:
-#    config: "VDOM4 config backup"
+  - name: backup system config
+    fortiosconfig:
+     config: "system config backup"
+     action: "backup"
      host:  "{{ host }}"
      username: "{{ username }}"
      password: "{{ password }}"
-     vdom: "{{ vdom }}"
-     backup: yes
- #    https: True
- #   ssl_verify: False
- #    scope: "vdom"
-     backup_filename: "/tmp/backup_test"
-#"Unsupported parameters for (fortios_config) module: 
-#config, filename, https, scope, ssl_verify 
+     vdom:  "{{ vdom }}"
+     https: False
+     ssl_verify: False
+     config_parameters:
+      filename: "backup_config_001"
+      # Specify global or vdom only backup ["global" | "vdom"].
+      scope: "global"
 
 #Supported parameters include: 
 #backup, backup_filename, backup_path, config_file, file_mode, filter, host, password, src, timeout, username, vdom"}
