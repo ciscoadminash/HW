@@ -3,14 +3,14 @@
   collections:
     - fortinet.fortios
   vars:
-    vdom: "root"
-    host: "192.168.122.60"
+    vdom: "VDOM10"
+    host: "10.87.0.4"
     username: "admin"
-    password: ""
+    password: "A$Cisc0Admin"
   tasks:
-  - name: backup global
+  - name: backup VDOM4
     fortios_config:
-     config: "system config backup"
+     config: "VDOM4 config backup"
      host:  "{{ host }}"
      username: "{{ username }}"
      password: "{{ password }}"
@@ -18,5 +18,5 @@
      backup: yes
      https: True
      ssl_verify: False
-     scope: "global"
+     scope: "vdom"
      filename: "/tmp/backup_test"
