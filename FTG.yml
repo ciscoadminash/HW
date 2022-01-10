@@ -10,17 +10,18 @@
   tasks:
   - name: backup VDOM4
     fortios_system_config_backup_restore:
-     config: "VDOM4 config backup"
+#    config: "VDOM4 config backup"
      host:  "{{ host }}"
      username: "{{ username }}"
      password: "{{ password }}"
      vdom: "{{ vdom }}"
      backup: yes
-     https: True
-     ssl_verify: False
-     scope: "vdom"
+ #    https: True
+ #   ssl_verify: False
+ #    scope: "vdom"
      backup_filename: "/tmp/backup_test"
-"Unsupported parameters for (fortios_config) module: 
-config, filename, https, scope, ssl_verify 
-Supported parameters include: 
-backup, backup_filename, backup_path, config_file, file_mode, filter, host, password, src, timeout, username, vdom"}
+#"Unsupported parameters for (fortios_config) module: 
+#config, filename, https, scope, ssl_verify 
+
+#Supported parameters include: 
+#backup, backup_filename, backup_path, config_file, file_mode, filter, host, password, src, timeout, username, vdom"}
