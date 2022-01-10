@@ -19,4 +19,8 @@
      https: True
      ssl_verify: False
      scope: "vdom"
-     filename: "/tmp/backup_test"
+     backup_filename: "/tmp/backup_test"
+"Unsupported parameters for (fortios_config) module: 
+config, filename, https, scope, ssl_verify 
+Supported parameters include: 
+backup, backup_filename, backup_path, config_file, file_mode, filter, host, password, src, timeout, username, vdom"}
