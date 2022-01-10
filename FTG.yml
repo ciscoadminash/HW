@@ -9,7 +9,7 @@
     password: "A$Cisc0Admin"
   tasks:
   - name: backup VDOM4
-    fortios_config:
+    fortios_system_config_backup_restore:
      config: "VDOM4 config backup"
      host:  "{{ host }}"
      username: "{{ username }}"
