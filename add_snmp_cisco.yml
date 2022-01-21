@@ -1,0 +1,16 @@
+---
+- name: snmp-server community 
+  hosts: all
+  gather_facts: false
+  connection: local
+
+  tasks:
+   - name: snmp-server community netmonitor01 RO
+     ios_config:
+        lines: snmp-server community netmonitor01 RO
+         register: output
+         
+   - name: print output
+     debug:
+        var: output   
+  
